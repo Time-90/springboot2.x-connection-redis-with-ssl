@@ -1,0 +1,129 @@
+#Redis单节点-不使用密码，不使用SSL（适用于自搭建redis或AWS ElastiCache单节点服务）
+#spring:
+#  redis:
+#    # redis服务地址
+#    host: 127.0.0.1
+#    # 端口号
+#    port: 6379
+#    # 数据库号，不同的数据库中数据隔离保存
+#    database: 0
+#    # 连接超时timeout属性，单位： 毫秒
+#    timeout: 10000
+#    lettuce:
+#      # 在关闭客户端连接之前等待任务处理完成的最长时间，在这之后，无论任务是否执行完成，都会被执行器关闭，默认100ms
+#      shutdown-timeout: 100
+#      pool:
+#        # 连接池最大连接数（使用负值表示没有限制）
+#        max-active: 100
+#        # 连接池中的最大空闲连接
+#        max-idle: 20
+#        # 连接池中的最小空闲连接
+#        min-idle: 2
+#        # max-wait属性，单位： 毫秒
+#        max-wait: 1000000
+
+
+#Redis单节点-使用密码，不使用SSL（适用于自搭建redis或AWS ElastiCache单节点服务）
+#spring:
+#  redis:
+#    # redis服务地址
+#    host: 127.0.0.1
+#    # 端口号
+#    port: 6379
+#    # 数据库号，不同的数据库中数据隔离保存
+#    database: 0
+#    # 密码
+#    password: 123456abcd
+#    # 连接超时timeout属性，单位： 毫秒
+#    timeout: 10000
+#    lettuce:
+#      # 在关闭客户端连接之前等待任务处理完成的最长时间，在这之后，无论任务是否执行完成，都会被执行器关闭，默认100ms
+#      shutdown-timeout: 100
+#      pool:
+#        # 连接池最大连接数（使用负值表示没有限制）
+#        max-active: 100
+#        # 连接池中的最大空闲连接
+#        max-idle: 20
+#        # 连接池中的最小空闲连接
+#        min-idle: 2
+#        # max-wait属性，单位： 毫秒
+#        max-wait: 1000000
+
+
+#Redis单节点-使用密码+使用SSL（适用于自搭建redis或AWS ElastiCache单节点服务）
+#spring:
+#  redis:
+#    # redis服务地址
+#    host: 127.0.0.1
+#    # 端口号
+#    port: 6379
+#    # 数据库号，不同的数据库中数据隔离保存
+#    database: 0
+#    # 密码
+#    password: 123456abcd
+#    # 是否使用ssl
+#    ssl: true
+#    # 连接超时timeout属性，单位： 毫秒
+#    timeout: 10000
+#    lettuce:
+#      # 在关闭客户端连接之前等待任务处理完成的最长时间，在这之后，无论任务是否执行完成，都会被执行器关闭，默认100ms
+#      shutdown-timeout: 100
+#      pool:
+#        # 连接池最大连接数（使用负值表示没有限制）
+#        max-active: 100
+#        # 连接池中的最大空闲连接
+#        max-idle: 20
+#        # 连接池中的最小空闲连接
+#        min-idle: 2
+#        # max-wait属性，单位： 毫秒
+#        max-wait: 1000000
+
+
+#Redis集群-使用密码，不使用SSL（适用于自搭建redis或AWS ElastiCache集群服务）
+#spring:
+#  redis:
+#    # 密码
+#    password: 123456abcd
+#    # 集群节点
+#    cluster:
+#      nodes: 127.0.0.1:6380,127.0.0.1:6381,127.0.0.1:6382,127.0.0.1:6383,127.0.0.1:6384,127.0.0.1:6385
+#    # 连接超时timeout属性，单位： 毫秒
+#    timeout: 10000
+#    lettuce:
+#      # 在关闭客户端连接之前等待任务处理完成的最长时间，在这之后，无论任务是否执行完成，都会被执行器关闭，默认100ms
+#      shutdown-timeout: 100
+#      pool:
+#        # 连接池最大连接数（使用负值表示没有限制）
+#        max-active: 100
+#        # 连接池中的最大空闲连接
+#        max-idle: 20
+#        # 连接池中的最小空闲连接
+#        min-idle: 2
+#        # max-wait属性，单位： 毫秒
+#        max-wait: 1000000
+
+
+#Redis集群-使用密码+使用SSL（适用于自搭建redis或AWS ElastiCache集群服务）
+spring:
+  redis:
+    # 密码
+    password: 123456abcd
+    # 是否使用ssl
+    ssl: true
+    # 集群节点
+    cluster:
+      nodes: 127.0.0.1:6379
+    # 连接超时timeout属性，单位： 毫秒
+    timeout: 10000
+    lettuce:
+      # 在关闭客户端连接之前等待任务处理完成的最长时间，在这之后，无论任务是否执行完成，都会被执行器关闭，默认100ms
+      shutdown-timeout: 100
+      pool:
+        # 连接池最大连接数（使用负值表示没有限制）
+        max-active: 100
+        # 连接池中的最大空闲连接
+        max-idle: 20
+        # 连接池中的最小空闲连接
+        min-idle: 2
+        # max-wait属性，单位： 毫秒
+        max-wait: 1000000
